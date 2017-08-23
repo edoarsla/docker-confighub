@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tomee>
+    <Resource id="ConfigHubMainDS" type="DataSource">
+        JdbcDriver = ${DB_DRIVER}
+        JdbcUrl = ${DB_URL}/ConfigHubMain
+        UserName = ${DB_USERNAME}
+        Password = ${DB_PASSWORD}
+
+        validationQuery="SELECT 1"
+        JtaManaged = false
+        initialSize = 20
+        maxActive = 100
+        maxIdle = 50
+        maxWaitTime = 3 seconds
+        minEvictableIdleTime = 3 seconds
+        numTestsPerEvictionRun = 30
+    </Resource>
+
+    <Resource id="ConfigHubApiRequestsDS" type="DataSource">
+        JdbcDriver = ${DB_DRIVER}
+        JdbcUrl = ${DB_URL}/ConfigHubClientRequests
+        UserName = ${DB_USERNAME}
+        Password = ${DB_PASSWORD}
+
+        validationQuery="SELECT 1"
+        JtaManaged = false
+        initialSize = 20
+        maxActive = 50
+        maxIdle = 50
+        maxWaitTime = 3 seconds
+        minEvictableIdleTime = 3 seconds
+        numTestsPerEvictionRun = 30
+    </Resource>
+</tomee>
