@@ -9,11 +9,16 @@ RUN         apk update && apk add --no-cache \
                 py-pip \
                 gettext \
             && pip install supervisor \
-            && mkdir /var/log/supervisord \
-            && wget -q https://github.com/ConfigHubPub/ConfigHubPlatform/releases/download/${VERSION}/confighub-${VERSION}.tar.gz \
-            && tar -xzvf confighub-${VERSION}.tar.gz \
-            && rm confighub-${VERSION}.tar.gz \
-            && mv confighub-${VERSION} confighub \
+            && mkdir /var/log/supervisord
+
+COPY        /Users/edin/staging/server.tar.gz .
+COPY        /Users/edin/ConfigHub/rest/target/ROOT.war .
+
+            # && wget -q https://github.com/ConfigHubPub/ConfigHubPlatform/releases/download/${VERSION}/confighub-${VERSION}.tar.gz \
+RUN         tar -xzvf server.tar.gz \
+            && rm server.tar.gz \
+            && mv server confighub \
+            && mv ROOT.war confighub/server/webapps \
             && rm /bin/sh && ln -s /bin/bash /bin/sh
             # Fixes a bug where /bin/sh on alpine can't do <<<.
 
