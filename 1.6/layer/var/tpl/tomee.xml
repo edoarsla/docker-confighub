@@ -2,7 +2,7 @@
 <tomee>
     <Resource id="ConfigHubMainDS" type="DataSource">
         JdbcDriver = ${DB_DRIVER}
-        JdbcUrl = ${DB_URL}/ConfigHubMain
+        JdbcUrl = ${DB_URL}/${DB_MAIN_NAME}
         UserName = ${DB_USERNAME}
         Password = ${DB_PASSWORD}
 
