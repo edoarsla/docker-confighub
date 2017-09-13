@@ -2,7 +2,7 @@
 
 #if [ ! -z "${DB_USERNAME}" ] && [ ! -z "${DB_PASSWORD}" ]; then
 export DB_DRIVER=${DB_DRIVER:-com.mysql.jdbc.Driver}
-export DB_URL=${DB_URL:-jdbc:mysql://db:3306}
+export DB_URL=${DB_URL:-jdbc:mysql://192.168.1.115:3306}
 
 echo "Writing database credentials to /confighub/server/conf/tomee.xml"
 envsubst < /var/tpl/tomee.xml > /confighub/server/conf/tomee.xml
