@@ -1,5 +1,5 @@
 # Docker ConfigHub
-A docker image for [Config Hub](https://www.confighub.com/).
+A docker image for [ConfigHub](https://www.confighub.com/).
 
 Execute with following:
 ```
