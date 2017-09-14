@@ -34,3 +34,5 @@ which will be applied if these parameters are omited:
     -e KEYSTORE_ALIAS=confighub
     -e KEYSTORE_PASSWORD=confighub
 ```
+
+After the docker container starts, you can access the web interface on `https://localhost:8080`.
