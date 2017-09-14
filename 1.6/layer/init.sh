@@ -24,7 +24,4 @@ export KEYSTORE_PASSWORD=${KEYSTORE_PASSWORD:-confighub}
 echo "Writing server configuration to confighub/confighub.sh"
 envsubst < /var/tpl/confighub.sh > /confighub/confighub.sh
 
-#supervisord --nodaemon --configuration /etc/supervisord.conf
-
-# Start the service
-source /confighub/server/bin/catalina.sh run
+supervisord --nodaemon --configuration /etc/supervisord.conf
