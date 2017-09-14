@@ -27,4 +27,4 @@ envsubst < /var/tpl/confighub.sh > /confighub/confighub.sh
 #supervisord --nodaemon --configuration /etc/supervisord.conf
 
 # Start the service
-source /confighub/server/bin/startup.sh
+source /confighub/server/bin/catalina.sh run

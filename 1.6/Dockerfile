@@ -1,6 +1,8 @@
 FROM        java:8-alpine
 
 ENV         VERSION="v1.6.3"
+ENV         PATH /confighub/server/bin:$PATH
+WORKDIR     /confighub/server
 
 RUN         apk update && apk add --no-cache \
                 wget \
