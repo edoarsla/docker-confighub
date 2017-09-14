@@ -5,6 +5,7 @@ Execute with following:
 ```
 docker run -d \
     -p 8080:80 \
+    -p 8443:443 \
     -e DB_MAIN_URL=jdbc:mysql://<databaseHost>:3306/ConfigHub \
     -e DB_MAIN_DRIVER=com.mysql.jdbc.Driver \
     -e DB_MAIN_USERNAME=<username> \
